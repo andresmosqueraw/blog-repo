@@ -25,7 +25,7 @@ const PostDetail = () => {
   
   const handleLike = () => {
     if (!isAuthenticated) {
-      toast.error('Please login to like posts');
+      toast.error('Por favor inicia sesión para dar me gusta');
       return;
     }
     
@@ -39,11 +39,11 @@ const PostDetail = () => {
   };
   
   const handleDelete = () => {
-    if (window.confirm('Are you sure you want to delete this post?')) {
+    if (window.confirm('¿Estás seguro de que quieres eliminar este post?')) {
       dispatch(deletePost(post._id))
         .unwrap()
         .then(() => {
-          toast.success('Post deleted successfully');
+          toast.success('Post eliminado exitosamente');
           navigate('/dashboard');
         })
         .catch((err) => {

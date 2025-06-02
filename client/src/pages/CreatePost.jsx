@@ -12,7 +12,7 @@ const CreatePost = () => {
     dispatch(createPost(postData))
       .unwrap()
       .then(() => {
-        toast.success('Post created successfully');
+        toast.success('Post creado exitosamente');
         navigate('/dashboard');
       })
       .catch((err) => {

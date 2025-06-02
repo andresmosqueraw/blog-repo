@@ -25,7 +25,7 @@ const EditPost = () => {
   useEffect(() => {
     // Check if post exists and user is the author
     if (post && user && post.author._id !== user.id) {
-      toast.error('You are not authorized to edit this post');
+      toast.error('No estás autorizado para editar este post');
       navigate('/dashboard');
     }
   }, [post, user, navigate]);
@@ -34,7 +34,7 @@ const EditPost = () => {
     dispatch(updatePost({ id, postData }))
       .unwrap()
       .then(() => {
-        toast.success('Post updated successfully');
+        toast.success('Post actualizado exitosamente');
         navigate(`/post/${id}`);
       })
       .catch((err) => {

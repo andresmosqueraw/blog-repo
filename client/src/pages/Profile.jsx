@@ -47,7 +47,7 @@ const Profile = () => {
     dispatch(updateProfile(formData))
       .unwrap()
       .then(() => {
-        toast.success('Profile updated successfully');
+        toast.success('Perfil actualizado exitosamente');
       })
       .catch((err) => {
         toast.error(err);

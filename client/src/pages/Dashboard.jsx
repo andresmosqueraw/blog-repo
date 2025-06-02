@@ -34,7 +34,7 @@ const Dashboard = () => {
       dispatch(deletePost(id))
         .unwrap()
         .then(() => {
-          toast.success('Post deleted successfully');
+          toast.success('Post eliminado exitosamente');
         })
         .catch((err) => {
           toast.error(err);
