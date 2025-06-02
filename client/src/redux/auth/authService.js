@@ -1,8 +1,8 @@
-import axios from 'axios';
+import api from '../api/axiosConfig';
 
 // Register user
 const register = async (userData) => {
-  const response = await axios.post('/api/auth/register', userData);
+  const response = await api.post('/api/auth/register', userData);
   
   if (response.data) {
     localStorage.setItem('token', response.data.token);
@@ -14,7 +14,7 @@ const register = async (userData) => {
 
 // Login user
 const login = async (userData) => {
-  const response = await axios.post('/api/auth/login', userData);
+  const response = await api.post('/api/auth/login', userData);
   
   if (response.data) {
     localStorage.setItem('token', response.data.token);
@@ -32,7 +32,7 @@ const loadUser = async () => {
     },
   };
   
-  const response = await axios.get('/api/auth/me', config);
+  const response = await api.get('/api/auth/me', config);
   
   return response.data;
 };
@@ -45,7 +45,7 @@ const updateProfile = async (profileData) => {
     },
   };
   
-  const response = await axios.put('/api/users/profile', profileData, config);
+  const response = await api.put('/api/users/profile', profileData, config);
   
   if (response.data) {
     localStorage.setItem('user', JSON.stringify(response.data.data));
