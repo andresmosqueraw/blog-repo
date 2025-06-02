@@ -44,8 +44,7 @@ const deletePost = async (id) => {
     },
   };
   
-  const response = await api.delete(`/api/posts/${id}`, config);
-  return response.data;
+  await api.delete(`/api/posts/${id}`, config);
 };
 
 // Like post

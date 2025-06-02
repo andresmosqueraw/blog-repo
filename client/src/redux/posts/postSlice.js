@@ -95,9 +95,9 @@ export const deletePost = createAsyncThunk(
   async (id, thunkAPI) => {
     try {
       thunkAPI.dispatch(setLoading('posts/delete'));
-      const response = await postService.deletePost(id);
+      await postService.deletePost(id);
       thunkAPI.dispatch(clearLoading('posts/delete'));
-      return { id, ...response };
+      return { id };
     } catch (error) {
       thunkAPI.dispatch(clearLoading('posts/delete'));
       const message =
