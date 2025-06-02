@@ -37,9 +37,9 @@ const Home = () => {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-4xl md:text-5xl font-bold mb-6"
+              className="text-4xl md:text-5xl font-bold mb-6 text-white"
             >
-              Share Your Stories With The World
+              Comparte Tus Historias Con El Mundo
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: -10 }}
@@ -47,7 +47,7 @@ const Home = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-xl md:text-2xl mb-8 opacity-90"
             >
-              A platform for writers, thinkers, and storytellers
+              Una plataforma para escritores, pensadores y narradores
             </motion.p>
             {!isAuthenticated && (
               <motion.div
@@ -59,13 +59,13 @@ const Home = () => {
                   to="/register" 
                   className="bg-white text-primary-700 px-6 py-3 rounded-md font-medium shadow-lg hover:bg-gray-100 transition-colors mr-4"
                 >
-                  Get Started
+                  Comenzar
                 </Link>
                 <Link 
                   to="/login" 
                   className="bg-transparent text-white border border-white px-6 py-3 rounded-md font-medium hover:bg-white hover:bg-opacity-10 transition-colors"
                 >
-                  Login
+                  Iniciar Sesión
                 </Link>
               </motion.div>
             )}
@@ -79,7 +79,7 @@ const Home = () => {
                   to="/create-post" 
                   className="bg-white text-primary-700 px-6 py-3 rounded-md font-medium shadow-lg hover:bg-gray-100 transition-colors"
                 >
-                  Create New Post
+                  Crear Nuevo Post
                 </Link>
               </motion.div>
             )}
@@ -90,16 +90,16 @@ const Home = () => {
       {/* Latest Posts Section */}
       <section className="py-12 md:py-16">
         <div className="container-wide">
-          <h2 className="text-3xl font-bold mb-8 text-center">Latest Posts</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">Últimos Posts</h2>
           
           {loading['posts/getAll'] ? (
             <Spinner />
           ) : posts.length === 0 ? (
             <div className="text-center py-12">
-              <p className="text-gray-500 text-lg">No posts found. Be the first to create a post!</p>
+              <p className="text-gray-500 text-lg">No se encontraron posts. ¡Sé el primero en crear uno!</p>
               {isAuthenticated && (
                 <Link to="/create-post" className="btn-primary mt-4 inline-block">
-                  Create Post
+                  Crear Post
                 </Link>
               )}
             </div>

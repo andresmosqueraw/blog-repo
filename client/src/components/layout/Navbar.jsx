@@ -38,16 +38,16 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-gray-700 hover:text-primary-600 transition-colors">
-              Home
+              Inicio
             </Link>
             
             {isAuthenticated ? (
               <>
                 <Link to="/dashboard" className="text-gray-700 hover:text-primary-600 transition-colors">
-                  Dashboard
+                  Panel
                 </Link>
                 <Link to="/create-post" className="btn-primary">
-                  New Post
+                  Nuevo Post
                 </Link>
                 <div className="relative group">
                   <button className="flex items-center text-gray-700 hover:text-primary-600">
@@ -56,13 +56,13 @@ const Navbar = () => {
                   </button>
                   <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                     <Link to="/profile" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      Profile
+                      Perfil
                     </Link>
                     <button
                       onClick={handleLogout}
                       className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100"
                     >
-                      Logout
+                      Cerrar Sesión
                     </button>
                   </div>
                 </div>
@@ -70,10 +70,10 @@ const Navbar = () => {
             ) : (
               <>
                 <Link to="/login" className="text-gray-700 hover:text-primary-600 transition-colors">
-                  Login
+                  Iniciar Sesión
                 </Link>
                 <Link to="/register" className="btn-primary">
-                  Register
+                  Registrarse
                 </Link>
               </>
             )}
@@ -108,7 +108,7 @@ const Navbar = () => {
                   className="text-gray-700 hover:text-primary-600 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
-                  Home
+                  Inicio
                 </Link>
                 
                 {isAuthenticated ? (
@@ -118,21 +118,21 @@ const Navbar = () => {
                       className="text-gray-700 hover:text-primary-600 transition-colors"
                       onClick={() => setIsOpen(false)}
                     >
-                      Dashboard
+                      Panel
                     </Link>
                     <Link
                       to="/create-post"
                       className="btn-primary text-center"
                       onClick={() => setIsOpen(false)}
                     >
-                      New Post
+                      Nuevo Post
                     </Link>
                     <Link
                       to="/profile"
                       className="text-gray-700 hover:text-primary-600 transition-colors flex items-center"
                       onClick={() => setIsOpen(false)}
                     >
-                      <FiUser className="mr-2" /> Profile
+                      <FiUser className="mr-2" /> Perfil
                     </Link>
                     <button
                       onClick={() => {
@@ -141,7 +141,7 @@ const Navbar = () => {
                       }}
                       className="text-gray-700 hover:text-primary-600 transition-colors flex items-center"
                     >
-                      <FiLogOut className="mr-2" /> Logout
+                      <FiLogOut className="mr-2" /> Cerrar Sesión
                     </button>
                   </>
                 ) : (
@@ -151,14 +151,14 @@ const Navbar = () => {
                       className="text-gray-700 hover:text-primary-600 transition-colors"
                       onClick={() => setIsOpen(false)}
                     >
-                      Login
+                      Iniciar Sesión
                     </Link>
                     <Link
                       to="/register"
                       className="btn-primary text-center"
                       onClick={() => setIsOpen(false)}
                     >
-                      Register
+                      Registrarse
                     </Link>
                   </>
                 )}

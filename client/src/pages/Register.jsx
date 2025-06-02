@@ -37,23 +37,23 @@ const Register = () => {
     const errors = {};
 
     if (!name.trim()) {
-      errors.name = 'Name is required';
+      errors.name = 'El nombre es requerido';
     }
 
     if (!email) {
-      errors.email = 'Email is required';
+      errors.email = 'El correo electrónico es requerido';
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
-      errors.email = 'Invalid email address';
+      errors.email = 'Dirección de correo electrónico inválida';
     }
 
     if (!password) {
-      errors.password = 'Password is required';
+      errors.password = 'La contraseña es requerida';
     } else if (password.length < 6) {
-      errors.password = 'Password must be at least 6 characters';
+      errors.password = 'La contraseña debe tener al menos 6 caracteres';
     }
 
     if (password !== password2) {
-      errors.password2 = 'Passwords do not match';
+      errors.password2 = 'Las contraseñas no coinciden';
     }
 
     setErrors(errors);
@@ -92,14 +92,14 @@ const Register = () => {
     >
       <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Create an account</h1>
-          <p className="mt-2 text-gray-600">Join our community of writers</p>
+          <h1 className="text-3xl font-bold text-gray-900">Crear una cuenta</h1>
+          <p className="mt-2 text-gray-600">Únete a nuestra comunidad de escritores</p>
         </div>
         
         <form className="space-y-6" onSubmit={onSubmit}>
           <div>
             <label htmlFor="name" className="form-label">
-              Name
+              Nombre
             </label>
             <input
               id="name"
@@ -109,14 +109,14 @@ const Register = () => {
               value={name}
               onChange={onChange}
               className={`form-input ${errors.name ? 'border-error-500' : ''}`}
-              placeholder="Your name"
+              placeholder="Tu nombre"
             />
             {errors.name && <p className="form-error">{errors.name}</p>}
           </div>
 
           <div>
             <label htmlFor="email" className="form-label">
-              Email address
+              Correo electrónico
             </label>
             <input
               id="email"
@@ -126,14 +126,14 @@ const Register = () => {
               value={email}
               onChange={onChange}
               className={`form-input ${errors.email ? 'border-error-500' : ''}`}
-              placeholder="your@email.com"
+              placeholder="tu@email.com"
             />
             {errors.email && <p className="form-error">{errors.email}</p>}
           </div>
 
           <div>
             <label htmlFor="password" className="form-label">
-              Password
+              Contraseña
             </label>
             <input
               id="password"
@@ -150,7 +150,7 @@ const Register = () => {
 
           <div>
             <label htmlFor="password2" className="form-label">
-              Confirm Password
+              Confirmar Contraseña
             </label>
             <input
               id="password2"
@@ -177,10 +177,10 @@ const Register = () => {
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
-                  Creating account...
+                  Creando cuenta...
                 </span>
               ) : (
-                'Create account'
+                'Crear cuenta'
               )}
             </button>
           </div>
@@ -188,9 +188,9 @@ const Register = () => {
 
         <div className="mt-6 text-center">
           <p className="text-gray-600">
-            Already have an account?{' '}
+            ¿Ya tienes una cuenta?{' '}
             <Link to="/login" className="text-primary-600 hover:text-primary-500">
-              Sign in
+              Iniciar Sesión
             </Link>
           </p>
         </div>

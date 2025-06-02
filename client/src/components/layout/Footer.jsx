@@ -18,35 +18,35 @@ const Footer = () => {
               BlogStack
             </Link>
             <p className="mt-4 text-gray-400">
-              A full-stack blog platform where users can share their thoughts, stories, and ideas with the world.
+              Una plataforma de blogs donde los usuarios pueden compartir sus pensamientos, historias e ideas con el mundo.
             </p>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="text-gray-400 hover:text-white transition-colors">
-                  Home
+                  Inicio
                 </Link>
               </li>
               <li>
                 <Link to="/login" className="text-gray-400 hover:text-white transition-colors">
-                  Login
+                  Iniciar Sesión
                 </Link>
               </li>
               <li>
                 <Link to="/register" className="text-gray-400 hover:text-white transition-colors">
-                  Register
+                  Registrarse
                 </Link>
               </li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <h3 className="text-lg font-semibold mb-4">Contacto</h3>
             <p className="text-gray-400">
-              Have questions or feedback? We'd love to hear from you!
+              ¿Tienes preguntas o comentarios? ¡Nos encantaría escucharte!
             </p>
             <a
               href="mailto:contact@blogstack.com"
@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} BlogStack. All rights reserved.</p>
+          <p>&copy; {currentYear} BlogStack. Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>
