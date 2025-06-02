@@ -1,14 +1,14 @@
-import axios from 'axios';
+import api from '../api/axiosConfig';
 
 // Get all posts
 const getPosts = async () => {
-  const response = await axios.get('/api/posts');
+  const response = await api.get('/api/posts');
   return response.data;
 };
 
 // Get post by ID
 const getPostById = async (id) => {
-  const response = await axios.get(`/api/posts/${id}`);
+  const response = await api.get(`/api/posts/${id}`);
   return response.data;
 };
 
@@ -20,7 +20,7 @@ const createPost = async (postData) => {
     },
   };
   
-  const response = await axios.post('/api/posts', postData, config);
+  const response = await api.post('/api/posts', postData, config);
   return response.data;
 };
 
@@ -32,7 +32,7 @@ const updatePost = async (id, postData) => {
     },
   };
   
-  const response = await axios.put(`/api/posts/${id}`, postData, config);
+  const response = await api.put(`/api/posts/${id}`, postData, config);
   return response.data;
 };
 
@@ -44,7 +44,7 @@ const deletePost = async (id) => {
     },
   };
   
-  const response = await axios.delete(`/api/posts/${id}`, config);
+  const response = await api.delete(`/api/posts/${id}`, config);
   return response.data;
 };
 
@@ -56,7 +56,7 @@ const likePost = async (id) => {
     },
   };
   
-  const response = await axios.put(`/api/posts/like/${id}`, {}, config);
+  const response = await api.put(`/api/posts/like/${id}`, {}, config);
   return response.data;
 };
 
@@ -68,7 +68,7 @@ const unlikePost = async (id) => {
     },
   };
   
-  const response = await axios.put(`/api/posts/unlike/${id}`, {}, config);
+  const response = await api.put(`/api/posts/unlike/${id}`, {}, config);
   return response.data;
 };
 
